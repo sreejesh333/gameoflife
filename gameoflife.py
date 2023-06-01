@@ -1,3 +1,4 @@
+import time
 def display_grid(grid) :
     lst =[]
     
@@ -48,21 +49,33 @@ def count_live_dead_neighbors(board, row, col):
 
 
 
-# def count_live_neighbours(board, row, col):
-#     rows = len(board)
-#     cols = len(board[0])
-#     live_neighbours = 0
 
-#     for i in range(-1, 2):
-#         for j in range(-1, 2):
-#             if i == 0 and j == 0:
-#                 continue
-#             neighbor_row = (row + i + rows) % rows
-#             neighbor_col = (col + j + cols) % cols
+def main():
+    # Initialize the starting grid
+    grid = [
+        [0, 0, 0],
+        [0, 0, 1],
+        [0, 0, 1],
+    ]
 
-#             if board[neighbor_row][neighbor_col] == 1:
-#                 live_neighbours += 1
 
-#     return live_neighbours
+    print(display_grid(grid))
+
+    
+    while True:
+        
+        grid = next_generation(grid)
+
+        
+        print(display_grid(grid))
+        time.sleep(0.8)
+
+    print("Game Over")
+
+
+
+if __name__ == "__main__":
+    main()
+
 
 
