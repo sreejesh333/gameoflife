@@ -21,7 +21,7 @@ def next_generation(board):
 
     for row in range(rows):
         for col in range(cols):
-            live_neighbours = get_neighbors(board, row, col)
+            live_neighbours = count_live_dead_neighbors(board, row, col)
 
             if board[row][col] == 1:
                 if live_neighbours < 2 or live_neighbours > 3:
@@ -35,7 +35,7 @@ def next_generation(board):
     return updated_board
 
 
-def get_neighbors(board, row, col):
+def count_live_dead_neighbors(board, row, col):
     rows = len(board)
     cols = len(board[0])
     live_neighbors = 0
