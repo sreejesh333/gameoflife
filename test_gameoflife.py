@@ -17,4 +17,5 @@ def sample_board():
 
 def test_next_live_or_dead():
     expected_board = [[0,0,0],[1,0,1],[0,1,1]]
-    assert gameoflife.next_generation(sample_board) == expected_board
+    board = sample_board()
+    assert gameoflife.next_generation(board) == expected_board
