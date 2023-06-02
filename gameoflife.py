@@ -59,7 +59,6 @@ def main():
     ]
 
 
-    print(display_grid(grid))
 
     
     while True:
