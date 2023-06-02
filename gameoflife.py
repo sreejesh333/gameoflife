@@ -53,9 +53,9 @@ def count_live_dead_neighbors(board, row, col):
 def main():
     # Initialize the starting grid
     grid = [
-        [0, 0, 0],
+        [0, 1, 0],
         [0, 0, 1],
-        [0, 0, 1],
+        [1, 1, 1],
     ]
 
 
@@ -70,7 +70,7 @@ def main():
         print(display_grid(grid))
         time.sleep(0.8)
 
-    print("Game Over")
+print("Game Over")
 
 
 
